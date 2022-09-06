@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import GitHub from "../src/img/GitHub.png"
 import Image from "../src/img/Image.png"
+import ContactI from "../src/img/Contact.png"
 function App() {
+  const Home = useRef(null)
+  const About = useRef(null)
+  const Contact = useRef(null)
+  function ScrolltoEl(ToElement:any) {
+    window.scrollTo({
+      top: ToElement.current.offsetTop,
+      behavior: "smooth"
+    })
+  }
   return (
-    <div className="App mx-5 mt-4">
+    <div className="App mx-5 mt-4 mb-5">
       <header>
         <nav className='flex justify-between flex-wrap'>
           <div className="main_text">Maksym Voloshyn</div>
           <div className="flex space-x-4 text">
-            <a href="/">Home</a>
-            <a href="/">About</a>
-            <a href="/">Work</a>
+            <div className='cursor-pointer'  onClick={()=>ScrolltoEl(Home)}>Home</div>
+            <div className='cursor-pointer' onClick={()=>ScrolltoEl(About)}>About</div>
+            <div className='cursor-pointer' onClick={()=>ScrolltoEl(Contact)}>Contact</div>
           </div>
           <div className="flex space-x-4">
-            <a href="/"><img src={GitHub} className="h-6" alt=""/></a>
+            <a href="https://github.com/maxvol123"><img src={GitHub} className="h-6" alt=""/></a>
           </div>
         </nav>
     <div className="flex justify-between flex-wrap">
@@ -29,6 +39,31 @@ function App() {
       </div>
     </div>
       </header>
+      <main className=' text text-[#03045E]' ref={About}>
+        <div className="yellow_text text-7xl">about.</div>
+        <div className="text">Hi, I'm Max, I'm 15 years old. And at a young age, I learned a lot of technologies for Front end like:
+</div>
+<ul className='ml-5 mb-2'>
+  <li>1.	HTML and BEM technology</li>
+  <li>2.	CSS and preprocessors</li>
+  <li>3.	JS and React</li>
+</ul>
+<div className="text">I recently finished middle school, at this school I went to an IT class. I started doing IT, including Front End, at the age of 12. I tried many technologies, but stopped on Front End.</div>
+      </main>
+      <footer ref={Contact}>
+      <div className="yellow_text text-7xl">contact.</div>
+      <div className="flex space-x-12 md:flex-nowrap sm:flex-wrap flex-wrap">
+        <img src={ContactI} alt="" className='h-72' />
+        <div className="flex flex-col">
+          <div className="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis. Id phasellus dui orci vulputate consequat nulla proin. Id sit scelerisque neque, proin bibendum diam.</div>
+          <ul>
+            <li>maxvol200727@gmail.com</li>
+            <a href='https://github.com/maxvol123'>https://github.com/maxvol123</a>
+            <li>maxvol200727@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      </footer>
     </div>
   );
 }

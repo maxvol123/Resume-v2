@@ -20,3 +20,9 @@ font-style: normal;
     border: solid 1px black;
     color: #474306;
 }
+.yellow_text{
+color: #fcf26b;
+font-family: poppins,sans-serif;
+font-weight: 600;
+font-style: normal;
+}
