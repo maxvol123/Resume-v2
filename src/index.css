@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body{
+    background: #FBF8CC;
+}
+.main_text{
+font-family: poppins,sans-serif;
+font-weight: 600;
+font-style: normal;
+color: #03045E;
+}
+.text{
+font-family: poppins,sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+.button_resume{
+    background: #F5EE84;
+    border: solid 1px black;
+    color: #474306;
+}
