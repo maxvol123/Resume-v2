@@ -14,7 +14,7 @@ function App() {
   }
   return (
     <div className="App mx-5 mt-4 mb-5">
-      <header>
+      <header className='min-h-screen'>
         <nav className='flex justify-between flex-wrap'>
           <div className="main_text">Maksym Voloshyn</div>
           <div className="flex space-x-4 text">
@@ -26,20 +26,20 @@ function App() {
             <a href="https://github.com/maxvol123"><img src={GitHub} className="h-6" alt=""/></a>
           </div>
         </nav>
-    <div className="flex justify-between flex-wrap">
+    <div className="flex justify-between flex-wrap mt-20">
       <div className="mt-32">
         <div className="text mb-2">Hello, I'm Max,</div>
         <div className="main_text text-7xl">Front end </div>
         <div className="main_text text-7xl">Developer</div>
         <div className="text">based in Cyprus.</div>
-        <button className='button_resume border-spacing-2 rounded px-3 py-1'>RESUME</button>
+        <a href="https://docs.google.com/document/d/1gUTmmSAyOpubV9SbbcSFPMcdSRW6rNVy/edit?usp=sharing&ouid=109421803578927270896&rtpof=true&sd=true"><button className='button_resume border-spacing-2 rounded px-3 py-1'>RESUME</button></a>
       </div>
       <div className="mt-16">
         <img className='h-72 relative md:h-96 mr-16 sm:h-72' src={Image} alt="" />
       </div>
     </div>
       </header>
-      <main className=' text text-[#03045E]' ref={About}>
+      <main className=' text text-[#03045E] mb-28' ref={About}>
         <div className="yellow_text text-7xl">about.</div>
         <div className="text">Hi, I'm Max, I'm 15 years old. And at a young age, I learned a lot of technologies for Front end like:
 </div>
